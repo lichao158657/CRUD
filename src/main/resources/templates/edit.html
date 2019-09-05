@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post" th:action="${student==null}?@{/add}:@{/upd}">
+    <input type="hidden" th:value="${student?.id}" name="id"/>
+    <p>姓名:<input type="text" name="name" th:value="${student?.name}"/></p>
+    <p>性别:<input type="text" name="sex" th:value="${student?.sex}"/></p>
+    <p>年级:<input type="text" name="gradeId" th:value="${student?.gradeId}"/></p>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>
